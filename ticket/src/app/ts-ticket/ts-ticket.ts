@@ -1,7 +1,14 @@
 export interface Tsticket {
-    tsticketId: number,
-    name: string,
-    dni: string,
-    created: Date,
-    enabled: boolean
+  tsticketId: number,
+  dni: string,
+  carrera: string,
+  modulo: boolean,
+  motivo: string,
+  // sugerencia: string,
+  descripcion: string,
+  telefono: string,
+  created: Date,
+  // updates: string,
+  enabled: boolean,
+
 }
