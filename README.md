@@ -1,4 +1,4 @@
-# Project
+# Integrative project
 ## Students
 - Luis Ruiz
 - Michael Vivanco 
