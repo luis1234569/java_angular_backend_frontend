@@ -29,9 +29,11 @@ export class TsticketComponent implements OnInit {
     carrera: "",
     modulo: true,
     motivo: "",
+    sugerencia: "",
     descripcion: "",
     telefono: "",
     created: new Date(),
+    updates: new Date(),
     enabled: true
   };
 
@@ -56,9 +58,11 @@ export class TsticketComponent implements OnInit {
             carrera: "",
             modulo: true,
             motivo: "",
+            sugerencia: "",
             descripcion: "",
             telefono: "",
             created: new Date(),
+            updates: new Date(),
             enabled: true
           };
         }
@@ -76,8 +80,7 @@ export class TsticketComponent implements OnInit {
   deleteById(): void {
     this.tsticketService.deleteById(this.currentEntity.tsticketId).subscribe(
       () => {
-        console.log("Borrado");
-        //redireccionar ....
+        console.log("El ticket ha sido borrado");
       }
     )
   }

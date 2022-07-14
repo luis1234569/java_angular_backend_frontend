@@ -4,11 +4,11 @@ export interface Tsticket {
   carrera: string,
   modulo: boolean,
   motivo: string,
-  // sugerencia: string,
+  sugerencia: string,
   descripcion: string,
   telefono: string,
   created: Date,
-  // updates: string,
+  updates: Date,
   enabled: boolean,
 
 }
