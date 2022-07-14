@@ -1,0 +1,69 @@
+<div class="grid justify-center mt-4">
+  <div class="card shadow-2xl shadow-red-600">
+    <div class="card-body">
+      <div class="card-title">
+        Solicitud<span class="text-primary">Usuario</span>
+      </div>
+      <div class="divider"> </div>
+      <div class="grid">
+        <label for="">Nombre:</label>
+        <input class="input input-info" type="text" name="" id="" placeholder="Ejemplo: Pedro Perez"
+          [(ngModel)]="currentEntity.name">
+          <label for="">Correo:</label>
+        <input class="input input-info" type="email" name="" id="" placeholder="Ejemplo: User@gmail.com"
+          [(ngModel)]="currentEntity.mail">
+        <label for="">Login</label>
+        <input class="input input-info" type="text" name="" id="" placeholder="Ejemplo: pedro001"
+          [(ngModel)]="currentEntity.login">
+
+          <label for="">contraseña:</label>
+          <input class="input input-info" type="password" name="" id="" placeholder="Min 6 caracteres"
+            [(ngModel)]="currentEntity.contra">
+            
+            <label for="">Rol Id:</label>
+          <input class="input input-info" type="text" name="" id="" placeholder="Ejemplo: Rol Admin"
+            [(ngModel)]="currentEntity.rol">
+
+
+        <div class="form-control">
+          <label class="label cursor-pointer justify-start">
+            <input type="checkbox" class="toggle toggle-primary" [(ngModel)]="currentEntity.enabled" />
+            <span class="label-text ml-2">Activo</span>
+          </label>
+        </div>
+        <input class="input input-info" type="date" name="" id="" [(ngModel)]="currentEntity.created">
+      </div>
+      <div class="card-actions">
+        <button class="btn btn-primary btn-sm" (click)="save()">Guardar</button>
+        <button class="btn btn-sm">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"> </div>
+
+  <div class="card card-compact shadow-2xl shadow-black bg-yellow-300 rounded-md">
+    <div class="card-body">
+      <div class="card-title">Precaución</div>
+      <p>Eliminara el registro sin poder recuperarlo</p>
+      <div class="card-actions">
+        <label for="my-modal-6" class="btn modal-button btn-secondary btn-xs">Eliminar</label>
+
+      
+        <input type="checkbox" id="my-modal-6" class="modal-toggle" />
+        <div class="modal modal-bottom sm:modal-middle">
+          <div class="modal-box">
+            <h3 class="font-bold text-lg">confirme la eliminación</h3>
+            <p class="py-4">No se revertiran los cambios
+            </p>
+            <div class="modal-action">
+              <label for="my-modal-6" class="btn btn-warning" (click)="deleteById()">Confirmar</label>
+              <label for="my-modal-6" class="btn btn-info">Cancelar</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
