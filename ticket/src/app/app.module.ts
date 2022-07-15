@@ -4,12 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TsticketComponent } from './ts-ticket/ts-ticket.component';
+import { PersonComponent } from './person/person.component';
 import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
-    TsticketComponent
+    PersonComponent
   ],
   imports: [
     BrowserModule,

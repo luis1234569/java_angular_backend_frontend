@@ -4,7 +4,7 @@ plugins {
 	id 'java'
 }
 
-group = 'yavirac'
+group = 'trabajos'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17'
 
