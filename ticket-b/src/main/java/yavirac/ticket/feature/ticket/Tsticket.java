@@ -10,16 +10,24 @@ import org.springframework.data.relational.core.mapping.Table;
 import lombok.Data;
 
 @Data
-@Table("tstickets")
+@Table("tsticketss")
 public class Tsticket {
 
     @Id
     @Column("tsticket_id")
     private long tsticketId;
-    private String name;
+
     private String dni;
+    private String carrera;
+    private boolean modulo;
+    private String motivo;
+    private String sugerencia;
+    private String descripcion;
+    // private bytea screenshot;
+    // private bytea file;
+    private String telefono;
     private Timestamp created;
-    private Timestamp updated;
+    private Timestamp updates;
     private boolean enabled;
-    
+
 }
