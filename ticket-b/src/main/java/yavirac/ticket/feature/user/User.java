@@ -1,4 +1,4 @@
-package yavirac.seguridad.feature.user;
+package yavirac.ticket.feature.user;
 
 
 import java.sql.Timestamp;

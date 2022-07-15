@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch TicketApplication",
+            "request": "launch",
+            "mainClass": "yavirac.ticket.TicketApplication",
+            "projectName": "ticket"
+        },
+        {
             "name": "ng serve --host 0.0.0.0",
             "type": "pwa-chrome",
             "request": "launch",

@@ -1,4 +1,4 @@
-package yavirac.seguridad.feature.user;
+package yavirac.ticket.feature.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
