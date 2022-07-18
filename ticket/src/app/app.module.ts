@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { TsticketComponent } from './ts-ticket/ts-ticket.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserComponent } from './ts-usuario/user.component';
+import { TsCarreraComponent } from './ts-carrera/ts-carrera.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TsticketComponent,
-    UserComponent
+    UserComponent,
+    TsCarreraComponent
   ],
   imports: [
     BrowserModule,
