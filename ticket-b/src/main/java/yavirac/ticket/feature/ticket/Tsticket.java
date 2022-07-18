@@ -1,6 +1,5 @@
 package yavirac.ticket.feature.ticket;
 
-import java.sql.Time;
 import java.sql.Timestamp;
 
 import org.springframework.data.annotation.Id;
