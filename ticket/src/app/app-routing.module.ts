@@ -7,8 +7,8 @@ import { UserComponent } from './ts-usuario/user.component';
 const routes: Routes = [
   {path: 'tsticket', component:TsticketComponent},
   {path: 'tsticket/:id', component:TsticketComponent},
-  {path: 'Usuario', component:UserComponent},
-  {path: 'Usuario/:id', component:UserComponent},
+  {path: 'usuario', component:UserComponent},
+  {path: 'usuario/:id', component:UserComponent},
   {path: 'carrera',component:TsCarreraComponent },
   {path: 'carrera/:id', component:TsCarreraComponent}
 ];
