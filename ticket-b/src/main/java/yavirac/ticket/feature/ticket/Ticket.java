@@ -1,33 +1,35 @@
 package yavirac.ticket.feature.ticket;
 
-import java.sql.Time;
 import java.sql.Timestamp;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
+import org.springframework.data.relational.core.mapping.MappedCollection;
 import org.springframework.data.relational.core.mapping.Table;
 
 import lombok.Data;
 
 @Data
-@Table("tsticketss")
-public class Tsticket {
+@Table("tickets")
+public class Ticket {
 
     @Id
-    @Column("tsticket_id")
-    private long tsticketId;
+    @Column("ticket_id")
+    private long ticketId;
 
-    private String dni;
-    private String carrera;
+    private String name;
+    @Column("carrera")
+    private long carreraId;
     private boolean modulo;
     private String motivo;
-    private String sugerencia;
-    private String descripcion;
-    // private bytea screenshot;
-    // private bytea file;
     private String telefono;
     private Timestamp created;
     private Timestamp updates;
     private boolean enabled;
+
+    @MappedCollection(idColumn = "ticket_id")
+    private Set<TicketTip> tips = new HashSet<>();
 
 }

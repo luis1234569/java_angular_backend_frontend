@@ -1,5 +1,7 @@
 package yavirac.ticket.feature.ticket;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -14,39 +16,48 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/tsticket")
+@RequestMapping("/api/ticket")
 @CrossOrigin({"*"})
-public class TsticketController {
+public class TicketController {
     
     @Autowired
-    TsticketService tsticketService;
+    TicketService ticketService;
 
     //CRUD
 
     //Create
     @PostMapping("/save")
-    public Tsticket save(@RequestBody Tsticket tsticket){
-        return tsticketService.save(tsticket);
+    public Ticket save(@RequestBody Ticket ticket){
+        return ticketService.save(ticket);
     }
 
     //Read
     @GetMapping("/{id}")
-    public Tsticket findById(@PathVariable long id){
-        return tsticketService.findById(id);
+    public Ticket findById(@PathVariable long id){
+        return ticketService.findById(id);
     }
 
     //Update
     @PutMapping("/update")
-    public Tsticket update(@RequestBody Tsticket tsticket)
+    public Ticket update(@RequestBody Ticket ticket)
     {
-        return tsticketService.save(tsticket);
+        return ticketService.save(ticket);
     }
 
     //Delete
     @DeleteMapping("/deleteById/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delete(@PathVariable long id){
-        tsticketService.deleteById(id);
+        ticketService.deleteById(id);
     }
 
+    @GetMapping("/findAll")
+    public List<Ticket> findAll(){
+        return ticketService.findAll();
+    }
+
+    @GetMapping("/findByName/{term}")
+    public List<Ticket> findByName(@PathVariable String term){
+        return ticketService.findByName(term);
+    }
 }

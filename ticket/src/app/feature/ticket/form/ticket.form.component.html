@@ -1,21 +1,27 @@
 
+
+
 <div class="grid justify-center mt-2">
   <div class="stats shadow-2xl shadow-black">
     <div class="stat">
       <div class="stat-title">Informar problema</div>
       <div class="form-control">
         <label for="">Identificación</label>
-        <input class="input input-primary" type="text" name="" id="" placeholder="Ejemplo: 17568888888"
-          [(ngModel)]="currentEntity.dni">
+        <input class="input input-primary" type="text" name="" id="" placeholder="Ejemplo: Luis"
+          [(ngModel)]="currentEntity.name">
       </div>
 
-      <div class="form-control">
+      <!-- <div class="form-control">
         <label for="">Carrera:</label>
         <select class="select" [(ngModel)]="currentEntity.carrera">
           <option value="1" >Desarrollo de Software</option>
           <option value="2" >Marketing</option>
         </select>
-      </div>
+      </div> -->
+
+      <label>Carrera</label>
+        <app-carrera-combobox (carreraIdEmitter)="currentEntity.carreraId=$event" [carreraId]="currentEntity.carreraId">
+        </app-carrera-combobox>
 
       <div class="form-control">
         <label for="">Modulo:</label>
@@ -38,7 +44,7 @@
     <div class="divider"></div>
     <div class="stat">
       <div class="stat-title">Solución</div>
-      <div class="form-control">
+      <!-- <div class="form-control">
         <label for="">Sugerencia:</label>
         <input class="input input-primary" type="text" name="" id="" placeholder="revisar la url(sugerencia de respaldo)"
           [(ngModel)]="currentEntity.sugerencia">
@@ -48,16 +54,55 @@
         <label for="">Descripcion:</label>
         <input class="input input-primary" type="text" name="" id="" placeholder="mas informacion en el correo(sugerencia de respaldo)"
           [(ngModel)]="currentEntity.descripcion">
-      </div>
+      </div> -->
       <div class="form-control">
         <label class="label cursor-pointer justify-start">
           <input type="checkbox" class="toggle toggle-primary" [(ngModel)]="currentEntity.enabled" />
           <span class="label-text ml-2">Activo</span>
         </label>
       </div>
-      <div class="form-control">
+      <!-- <div class="form-control">
         <input class="input input-primary" type="date" name="" id="" [(ngModel)]="currentEntity.created">
-      </div>
+      </div> -->
+
+      <table class="table table-compact">
+        <thead>
+          <tr>
+            <th>Sugerencia</th>
+            <th>Emiminar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let tip of currentEntity.tips">
+            <td>{{tip.name}}</td>
+            <td >
+              <a (click)="removeTip(tip.id)">
+                <svg class="w-4 h-4" fill="red"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+               xml:space="preserve">
+               <g>
+                 <path
+                   d="M490.667,96c0-17.673-14.327-32-32-32h-80.555C364.632,25.757,328.549,0.13,288,0h-64   c-40.549,0.13-76.632,25.757-90.112,64H53.333c-17.673,0-32,14.327-32,32l0,0c0,17.673,14.327,32,32,32H64v266.667   C64,459.468,116.532,512,181.333,512h149.333C395.468,512,448,459.468,448,394.667V128h10.667   C476.34,128,490.667,113.673,490.667,96z M384,394.667C384,424.122,360.122,448,330.667,448H181.333   C151.878,448,128,424.122,128,394.667V128h256V394.667z" />
+                 <path
+                   d="M202.667,384c17.673,0,32-14.327,32-32V224c0-17.673-14.327-32-32-32s-32,14.327-32,32v128   C170.667,369.673,184.994,384,202.667,384z" />
+                 <path
+                   d="M309.333,384c17.673,0,32-14.327,32-32V224c0-17.673-14.327-32-32-32s-32,14.327-32,32v128   C277.333,369.673,291.66,384,309.333,384z" />
+               </g>
+             </svg>
+              </a>
+
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <app-tip-search (tipEmitter)="this.currentEntity.tips.push($event)" ></app-tip-search>
+            </td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+
       <div class="divider"> </div>
       <div class="form-control">
         <div class="card-actions">
@@ -72,7 +117,7 @@
   <div class="card card-compact shadow-2xl shadow-black ">
     <div class="card-body">
       <div class="card-title">Alert</div>
-      <p>Para eliminar el registro con cedula:  <input type="text" placeholder="-----Ninguno-----" [(ngModel)]="currentEntity.dni" disabled> presione Eliminar</p>
+      <p>Para eliminar el registro con nombre:  <input type="text" placeholder="-----Ninguno-----" [(ngModel)]="currentEntity.name" disabled> presione Eliminar</p>
       <div class="card-actions">
         <label for="my-modal-6" class="btn btn-outline btn-error ">Eliminar</label>
 
