@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Carrera } from './carrera';
-import { CarreraService } from './carrera.service';
+import { Carrera } from '../carrera';
+import { CarreraService } from '../carrera.service';
 
 @Component({
-  selector: 'app-ts-carrera',
-  templateUrl: './ts-carrera.component.html',
+  selector: 'app-ts-carrera-form',
+  templateUrl: './ts-carrera.form.component.html',
 })
-export class TsCarreraComponent implements OnInit {
+export class TsCarreraFormComponent implements OnInit {
   constructor(
     private carreraService : CarreraService,
     private activateRouter : ActivatedRoute,
