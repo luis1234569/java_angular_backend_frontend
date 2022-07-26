@@ -1,0 +1,188 @@
+<!-- <div class="grid justify-center ">
+  <div class="card shadow-2xl shadow-sky-600">
+    <div class="card-body">
+      <div class="card-title">
+        Administración <span class="text-primary">Personas</span>
+      </div>
+      <div class="divider"> </div>
+      <div class="grid">
+        <div class="form-control">
+          <label for="">Identificación</label>
+          <input class="input input-primary" type="text" name="" id="" placeholder="Ejemplo: 17568888888"
+            [(ngModel)]="currentEntity.dni">
+        </div>
+        <div class="form-control">
+          <label for="">Carrera:</label>
+          <input class="input input-primary" type="text" name="" id="" placeholder="Ejemplo: Desarrollo de software"
+            [(ngModel)]="currentEntity.carrera">
+        </div>
+        <div class="form-control">
+          <label class="label cursor-pointer justify-start">
+            <input type="checkbox" class="toggle toggle-primary" [(ngModel)]="currentEntity.modulo" />
+            <span class="label-text ml-2">Tipo de archivo</span>
+          </label>
+        </div>
+        <div class="form-control">
+          <label for="">Motivo:</label>
+          <input class="input input-primary" type="text" name="" id=""
+            placeholder="Ejemplo: No puedo ingresar al sistema" [(ngModel)]="currentEntity.motivo">
+        </div>
+      </div>
+      <div class="grid">
+        <div class="form-control">
+          <label for="">Sugerencia:</label>
+          <input class="input input-primary" type="text" name="" id="" placeholder="revisar la url"
+            [(ngModel)]="currentEntity.sugerencia">
+
+        </div>
+        <div class="form-control">
+          <label for="">Descripcion:</label>
+          <input class="input input-primary" type="text" name="" id="" placeholder="mas informacion en el correp"
+            [(ngModel)]="currentEntity.descripcion">
+        </div>
+        <div class="form-control">
+          <label for="">Telefono:</label>
+          <input class="input input-primary" type="number" name="" id="" placeholder="Ejemplo: 09985864545"
+            [(ngModel)]="currentEntity.telefono">
+        </div>
+        <div class="form-control">
+          <label class="label cursor-pointer justify-start">
+            <input type="checkbox" class="toggle toggle-primary" [(ngModel)]="currentEntity.enabled" />
+            <span class="label-text ml-2">Activo</span>
+          </label>
+        </div>
+        <div class="form-control">
+          <input class="input input-primary" type="date" name="" id="" [(ngModel)]="currentEntity.created">
+        </div>
+        <div class="divider"> </div>
+        <div class="form-control">
+          <div class="card-actions">
+            <button class="btn btn-primary btn-sm" (click)="save()">Guardar</button>
+            <button class="btn btn-sm">Cancelar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="divider"> </div>
+  <div class="card card-compact shadow-2xl shadow-black bg-red-300 ">
+    <div class="card-body">
+      <div class="card-title">Precaución</div>
+      <p>Si elimina el registro no prodrá recuperarlo</p>
+      <div class="card-actions">
+        <label for="my-modal-6" class="btn modal-button btn-secondary btn-xs">Eliminar</label>
+
+
+        <input type="checkbox" id="my-modal-6" class="modal-toggle" />
+        <div class="modal modal-bottom sm:modal-middle">
+          <div class="modal-box">
+            <h3 class="font-bold text-lg">Por favor confirme la eliminación</h3>
+            <p class="py-4">No se podrán revertir los cambios
+            </p>
+            <div class="modal-action">
+              <label for="my-modal-6" class="btn btn-info btn-warning" (click)="deleteById()">Confirmar</label>
+              <label for="my-modal-6" class="btn btn-info">Cancelar</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- ---------------------------------- -->
+<div class="grid justify-center mt-5">
+  <div class="stats shadow-2xl shadow-sky-600">
+    <div class="stat">
+      <div class="stat-title">Informar problema</div>
+      <div class="form-control">
+        <label for="">Identificación</label>
+        <input class="input input-primary" type="text" name="" id="" placeholder="Ejemplo: 17568888888"
+          [(ngModel)]="currentEntity.dni">
+      </div>
+
+      <div class="form-control">
+        <label for="">Carrera:</label>
+        <select class="select" [(ngModel)]="currentEntity.carrera">
+          <option value="1" >Desarrollo de Software</option>
+          <option value="2" >Marketing</option>
+        </select>
+      </div>
+
+      <div class="form-control">
+        <label for="">Modulo:</label>
+        <select class="select" [(ngModel)]="currentEntity.modulo">
+          <option value="true" >SIAU</option>
+          <option value="false" >SIGA</option>
+        </select>
+      </div>
+      <div class="form-control">
+        <label for="">Motivo:</label>
+        <input class="input input-primary" type="text" name="" id="" placeholder="Ejemplo: No puedo ingresar al sistema"
+          [(ngModel)]="currentEntity.motivo">
+      </div>
+      <div class="form-control">
+        <label for="">Telefono de Contacto:</label>
+        <input class="input input-primary" type="tel" name="" id="" placeholder="Ejemplo: 09985864545"
+          [(ngModel)]="currentEntity.telefono">
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="stat">
+      <div class="stat-title">Solución</div>
+      <div class="form-control">
+        <label for="">Sugerencia:</label>
+        <input class="input input-primary" type="text" name="" id="" placeholder="revisar la url(sugerencia de respaldo)"
+          [(ngModel)]="currentEntity.sugerencia">
+
+      </div>
+      <div class="form-control">
+        <label for="">Descripcion:</label>
+        <input class="input input-primary" type="text" name="" id="" placeholder="mas informacion en el correo(sugerencia de respaldo)"
+          [(ngModel)]="currentEntity.descripcion">
+      </div>
+      <div class="form-control">
+        <label class="label cursor-pointer justify-start">
+          <input type="checkbox" class="toggle toggle-primary" [(ngModel)]="currentEntity.enabled" />
+          <span class="label-text ml-2">Activo</span>
+        </label>
+      </div>
+      <div class="form-control">
+        <input class="input input-primary" type="date" name="" id="" [(ngModel)]="currentEntity.created">
+      </div>
+      <div class="divider"> </div>
+      <div class="form-control">
+        <div class="card-actions">
+          <button class="btn btn-primary btn-sm" (click)="save()">Guardar</button>
+          <!-- <button class="btn btn-sm">Cancelar</button> -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="divider"></div>
+  <div class="card card-compact shadow-2xl shadow-black ">
+    <div class="card-body">
+      <div class="card-title">Alert</div>
+      <p>Para eliminar el registro con cedula:  <input type="text" placeholder="-----Ninguno-----" [(ngModel)]="currentEntity.dni" disabled> presione Eliminar</p>
+      <div class="card-actions">
+        <label for="my-modal-6" class="btn btn-outline btn-error ">Eliminar</label>
+
+
+        <input type="checkbox" id="my-modal-6" class="modal-toggle" />
+        <div class="modal modal-bottom sm:modal-middle">
+          <div class="modal-box">
+            <h3 class="font-bold text-lg">Por favor confirme la eliminación</h3>
+            <p class="py-4">No se podrán revertir los cambios
+            </p>
+            <div class="modal-action">
+              <label for="my-modal-6" class="btn btn-info btn-warning" (click)="deleteById()">Confirmar</label>
+              <label for="my-modal-6" class="btn btn-neutral">Cancelar</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
