@@ -1,6 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Tsticket } from './ts-ticket';
 import { Observable } from 'rxjs';
+
+// private url: string = "http://localhost:8080/api/tsticket";
+// private url: string = "http://localhost:8080/api/tsticket";
+// private url: string = "http://localhost:8080/api/tsticket";
+
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({

@@ -1,6 +1,5 @@
 package yavirac.ticket.feature.ticket;
 
-
 import java.sql.Timestamp;
 
 import org.springframework.data.annotation.Id;
@@ -27,5 +26,5 @@ public class Tsticket {
     private Timestamp created;
     private Timestamp updates;
     private boolean enabled;
-
+    
 }

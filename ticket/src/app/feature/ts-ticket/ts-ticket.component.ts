@@ -78,7 +78,7 @@ export class TsticketComponent implements OnInit {
   }
 
   deleteById(): void {
-    this.tsticketService.deleteById(this.currentEntity.tsticketId).subscribe(
+    this.tsticketService.deleteById(this.currentEntity.tsticketId ).subscribe(
       () => {
         console.log("El ticket ha sido borrado");
       }
