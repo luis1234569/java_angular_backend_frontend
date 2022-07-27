@@ -33,7 +33,7 @@ export class UserComponent implements OnInit {
           this.findById(parseInt(params.get("id")!));
         }
       }
-    )
+    ) 
   }
 
   save():void {

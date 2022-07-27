@@ -1,6 +1,6 @@
 package yavirac.ticket.feature.ticket;
 
-import java.sql.Time;
+
 import java.sql.Timestamp;
 
 import org.springframework.data.annotation.Id;
@@ -23,8 +23,6 @@ public class Tsticket {
     private String motivo;
     private String sugerencia;
     private String descripcion;
-    // private bytea screenshot;
-    // private bytea file;
     private String telefono;
     private Timestamp created;
     private Timestamp updates;
