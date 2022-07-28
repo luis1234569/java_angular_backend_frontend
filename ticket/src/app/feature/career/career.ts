@@ -1,4 +1,4 @@
-export interface Carrera {
+export interface Career {
     id: number,
     name: string
 }

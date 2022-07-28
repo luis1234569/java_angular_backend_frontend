@@ -28,6 +28,7 @@ public class TicketController {
     //Create
     @PostMapping("/save")
     public Ticket save(@RequestBody Ticket ticket){
+        // System.out.println(ticketService.save(ticket));
         return ticketService.save(ticket);
     }
 
@@ -60,4 +61,6 @@ public class TicketController {
     public List<Ticket> findByName(@PathVariable String term){
         return ticketService.findByName(term);
     }
+
 }
+

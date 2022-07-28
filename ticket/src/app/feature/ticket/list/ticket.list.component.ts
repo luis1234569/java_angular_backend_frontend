@@ -16,11 +16,14 @@ export class TicketListComponent implements OnInit {
 
   ngOnInit(): void {
     this.findAll();
+    console.log('funciona');
   }
 
   public findAll():void {
+    // console.log(this.ticketService.findAll());
     this.ticketService.findAll().subscribe(
       (response) => this.ticketList = response
+
     )
   }
 
@@ -28,6 +31,7 @@ export class TicketListComponent implements OnInit {
     if (term.length>=2){
       this.ticketService.findByName(term).subscribe(
         (response) => this.ticketList = response
+        
       )
     }
     if (term.length===0){

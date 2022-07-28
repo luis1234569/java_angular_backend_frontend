@@ -6,7 +6,7 @@ import { TicketFormComponent } from './ticket/form/ticket.form.component';
 import { FormsModule } from '@angular/forms';
 import { TicketListComponent } from './ticket/list/ticket.list.component';
 import { TicketToolbarComponent } from './ticket/toolbar/ticket.toolbar.component';
-import { CarreraComboboxComponent } from './carrera/carrera-combobox.component';
+import { CarreraComboboxComponent } from './career/career-combobox.component';
 import { TipSearchComponent } from './tip/tip-search/tip-search.component';
 
 

@@ -10,7 +10,7 @@ import lombok.Data;
 @Table("tips")
 public class Tip {
     @Id
-    @Column(("tip_id"))
+    @Column("tip_id")
     private long id;
     private String name;
 }

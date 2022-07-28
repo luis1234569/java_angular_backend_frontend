@@ -6,8 +6,6 @@ export interface Ticket {
   carreraId: number,
   modulo: boolean,
   motivo: string,
-  // sugerencia: string,
-  // descripcion: string,
   telefono: string,
   created: Date,
   updates: Date,

@@ -32,7 +32,7 @@ export class TicketService {
   }
 
   public findByName(term: string): Observable<Ticket[]>{
-    return this.http.get<Ticket[]>(this.url+"/findByName"+term, this.httpOptions);
+    return this.http.get<Ticket[]>(this.url+"/findByName/"+term, this.httpOptions);
   }
 
   public findAll(): Observable<Ticket[]>{

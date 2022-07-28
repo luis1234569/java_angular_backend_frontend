@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Carrera } from './carrera';
+import { Career } from './career';
 
 @Injectable({
   providedIn: 'root'
@@ -16,18 +16,18 @@ export class CarreraService {
     headers: new HttpHeaders({"Content-Type":"application/json"})
   }
 
-  private url: string = "http://localhost:8080/api/carrera";
+  private url: string = "http://localhost:8080/api/career";
 
 
 
-  public findById(id: number): Observable<Carrera>{
-    return this.http.get<Carrera>(this.url+"/findById/"+id, this.httpOptions);
+  public findById(id: number): Observable<Career>{
+    return this.http.get<Career>(this.url+"/findById/"+id, this.httpOptions);
   }
 
 
 
-  public findAll(): Observable<Carrera[]>{
-    return this.http.get<Carrera[]>(this.url+"/findAll", this.httpOptions);
+  public findAll(): Observable<Career[]>{
+    return this.http.get<Career[]>(this.url+"/findAll", this.httpOptions);
   }
 
 

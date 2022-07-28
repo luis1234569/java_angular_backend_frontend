@@ -24,8 +24,6 @@ export class TipService {
     return this.http.get<Tip>(this.url+"/findById/"+id, this.httpOptions);
   }
 
-
-
   public findAll(): Observable<Tip[]>{
     return this.http.get<Tip[]>(this.url+"/findAll", this.httpOptions);
   }

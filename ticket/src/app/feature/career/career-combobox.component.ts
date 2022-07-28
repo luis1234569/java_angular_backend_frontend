@@ -1,10 +1,10 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Carrera } from './carrera';
-import { CarreraService } from './carrera.service';
+import { Career } from './career';
+import { CarreraService } from './career.service';
 
 @Component({
   selector: 'app-carrera-combobox',
-  templateUrl: './carrera-combobox.component.html'
+  templateUrl: './career-combobox.component.html'
 })
 export class CarreraComboboxComponent implements OnInit {
 
@@ -12,7 +12,7 @@ export class CarreraComboboxComponent implements OnInit {
     private carreraService: CarreraService
   ) { }
 
-  carreras: Carrera[] = [];
+  carreras: Career[] = [];
   @Output() carreraIdEmitter = new EventEmitter<number>();
   @Input() carreraId: number = 0;
 
@@ -27,7 +27,6 @@ export class CarreraComboboxComponent implements OnInit {
   }
 
   public onSelect(id:string){
-    console.log("El id de la ciudad es:" + id);
     this.carreraIdEmitter.emit(parseInt(id));
   }
 

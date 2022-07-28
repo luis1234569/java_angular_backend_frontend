@@ -7,7 +7,7 @@ import {TicketService} from '../ticket.service';
 
 
 @Component({
-  selector: 'app-ticket',
+  selector: 'app-ticket-form',
   templateUrl: './ticket.form.component.html'
 })
 export class TicketFormComponent implements OnInit {
@@ -79,13 +79,6 @@ export class TicketFormComponent implements OnInit {
     )
   }
 
-  // findById(id: number): void {
-  //   this.ticketService.findById(id).subscribe(
-  //     (response) => {
-  //       this.currentEntity = response;
-  //     }
-  //   )
-  // }
 
   deleteById(): void {
     this.ticketService.deleteById(this.currentEntity.ticketId).subscribe(

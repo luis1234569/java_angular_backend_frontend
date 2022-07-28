@@ -11,6 +11,7 @@ CREATE TABLE carreras
     carrera_id serial NOT NULL , primary key(carrera_id),
 	name character varying(100)
 );
+INSERT INTO carreras (name) VALUES ('agricultura');
 
 CREATE TABLE tickets
 (
@@ -28,7 +29,7 @@ CREATE TABLE tickets
     updates timestamp with time zone,
     enabled boolean
 );
-
+INSERT INTO tickets (name,carrera,modulo,motivo,telefono,enabled) VALUES ('Luis',1,true,'motivo','09978',true);
 
 CREATE TABLE tips
 (
@@ -36,6 +37,7 @@ CREATE TABLE tips
 	name character varying(100),
     descripcion character varying(500)
 );
+INSERT INTO tips (name) VALUES ('revisar');
 
 CREATE TABLE ticketTip
 (
@@ -43,6 +45,7 @@ CREATE TABLE ticketTip
     ticket_id integer,CONSTRAINT fk_ticket FOREIGN KEY (ticket_id) REFERENCES tickets(ticket_id),
 	tip_id integer,CONSTRAINT fk_tip FOREIGN KEY (tip_id) REFERENCES tips(tip_id)
 );
+INSERT INTO ticketTip (ticket_id,tip_id) VALUES (2,1);
 
 
 

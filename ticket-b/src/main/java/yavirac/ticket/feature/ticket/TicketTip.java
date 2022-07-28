@@ -7,14 +7,12 @@ import org.springframework.data.relational.core.mapping.Table;
 import lombok.Data;
 
 @Data 
-@Table("ticket_tip")
+@Table("tickettip")
 public class TicketTip {
     @Id
     @Column("tickettip_id")
     private long id;
-    @Column("ticket_id")
     private long ticketId;
-    @Column("tip_id")
     private long tipId;
 
     

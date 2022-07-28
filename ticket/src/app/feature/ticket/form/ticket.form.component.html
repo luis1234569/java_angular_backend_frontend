@@ -1,5 +1,5 @@
 
-
+<app-ticket-toolbar [entityName]="currentEntity.name"></app-ticket-toolbar>
 
 <div class="grid justify-center mt-2">
   <div class="stats shadow-2xl shadow-black">
@@ -10,14 +10,6 @@
         <input class="input input-primary" type="text" name="" id="" placeholder="Ejemplo: Luis"
           [(ngModel)]="currentEntity.name">
       </div>
-
-      <!-- <div class="form-control">
-        <label for="">Carrera:</label>
-        <select class="select" [(ngModel)]="currentEntity.carrera">
-          <option value="1" >Desarrollo de Software</option>
-          <option value="2" >Marketing</option>
-        </select>
-      </div> -->
 
       <label>Carrera</label>
         <app-carrera-combobox (carreraIdEmitter)="currentEntity.carreraId=$event" [carreraId]="currentEntity.carreraId">
@@ -44,17 +36,6 @@
     <div class="divider"></div>
     <div class="stat">
       <div class="stat-title">Solución</div>
-      <!-- <div class="form-control">
-        <label for="">Sugerencia:</label>
-        <input class="input input-primary" type="text" name="" id="" placeholder="revisar la url(sugerencia de respaldo)"
-          [(ngModel)]="currentEntity.sugerencia">
-
-      </div>
-      <div class="form-control">
-        <label for="">Descripcion:</label>
-        <input class="input input-primary" type="text" name="" id="" placeholder="mas informacion en el correo(sugerencia de respaldo)"
-          [(ngModel)]="currentEntity.descripcion">
-      </div> -->
       <div class="form-control">
         <label class="label cursor-pointer justify-start">
           <input type="checkbox" class="toggle toggle-primary" [(ngModel)]="currentEntity.enabled" />

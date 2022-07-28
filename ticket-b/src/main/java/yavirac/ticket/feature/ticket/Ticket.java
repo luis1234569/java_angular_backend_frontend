@@ -16,9 +16,7 @@ import lombok.Data;
 public class Ticket {
 
     @Id
-    @Column("ticket_id")
     private long ticketId;
-
     private String name;
     @Column("carrera")
     private long carreraId;
