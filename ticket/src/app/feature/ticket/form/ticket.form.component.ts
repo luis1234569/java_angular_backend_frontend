@@ -43,7 +43,7 @@ export class TicketFormComponent implements OnInit {
   }
 
   save(): void {
-    console.table(this.currentEntity);
+    console.log(this.currentEntity);
     this.ticketService.save(this.currentEntity)
       .subscribe(
         () => {
@@ -96,4 +96,9 @@ export class TicketFormComponent implements OnInit {
     );
   }
 
+  addTips(tip: Tip):void {
+    tip.ticketId=this.currentEntity.ticketId;
+    tip.tipId=tip.id;
+    this.currentEntity.tips.push(tip);
+  }
 }

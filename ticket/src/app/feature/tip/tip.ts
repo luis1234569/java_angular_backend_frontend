@@ -1,4 +1,6 @@
 export interface Tip {
     id: number,
-    name: string
+    name: string,
+    ticketId: number,
+    tipId:number
 }

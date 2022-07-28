@@ -37,7 +37,7 @@ CREATE TABLE tips
 	name character varying(100),
     descripcion character varying(500)
 );
-INSERT INTO tips (name) VALUES ('revisar');
+INSERT INTO tips (name) VALUES ('devisar');
 
 CREATE TABLE ticketTip
 (

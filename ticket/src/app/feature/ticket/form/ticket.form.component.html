@@ -6,7 +6,7 @@
     <div class="stat">
       <div class="stat-title">Informar problema</div>
       <div class="form-control">
-        <label for="">Identificación</label>
+        <label for="">Nombre</label>
         <input class="input input-primary" type="text" name="" id="" placeholder="Ejemplo: Luis"
           [(ngModel)]="currentEntity.name">
       </div>
@@ -76,7 +76,7 @@
           </tr>
           <tr>
             <td>
-              <app-tip-search (tipEmitter)="this.currentEntity.tips.push($event)" ></app-tip-search>
+              <app-tip-search (tipEmitter)="addTips($event)" ></app-tip-search>
             </td>
             <td></td>
           </tr>

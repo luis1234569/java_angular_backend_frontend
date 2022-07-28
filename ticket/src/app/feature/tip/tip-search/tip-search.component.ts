@@ -32,6 +32,7 @@ export class TipSearchComponent implements OnInit {
   }
 
   onSelect(tip: Tip):void {
+    console.log(tip)
     this.tipEmitter.emit(tip);
   }
 
