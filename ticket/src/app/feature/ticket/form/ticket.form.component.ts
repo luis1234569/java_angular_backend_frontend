@@ -70,7 +70,7 @@ export class TicketFormComponent implements OnInit {
         this.currentEntity = response;
         this.currentEntity.tips.forEach(
           (tip) => {
-            this.tipService.findById(tip.id).subscribe(
+            this.tipService.findById(tip.tipId).subscribe(////////////////////////
               (item) => tip.name = item.name
             )
           }
@@ -92,13 +92,13 @@ export class TicketFormComponent implements OnInit {
 
     this.currentEntity.tips =
     this.currentEntity.tips.filter(
-      (item) => item.id != id
+      (item) => item.tipId != id/////////////////////////
     );
   }
 
   addTips(tip: Tip):void {
     tip.ticketId=this.currentEntity.ticketId;
-    tip.tipId=tip.id;
+    tip.tipId=tip.tipId;
     this.currentEntity.tips.push(tip);
   }
 }

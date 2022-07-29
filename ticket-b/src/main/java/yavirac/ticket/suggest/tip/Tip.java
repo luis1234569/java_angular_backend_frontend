@@ -15,8 +15,8 @@ import lombok.Data;
 @Table("tips")
 public class Tip {
     @Id
-    @Column("tip_id")
-    private long id;
+    // @Column("tip_id")
+    private long TipId;
     private String name;
 
     // @MappedCollection(idColumn = "tip_id")

@@ -20,7 +20,7 @@ export class TipSearchComponent implements OnInit {
   }
 
   onInput(term: string):void {
-    if (term.length>=2){
+    if (term.length>=1){
       this.tipService.findByName(term).subscribe(
         (response) => this.tips = response
       )
