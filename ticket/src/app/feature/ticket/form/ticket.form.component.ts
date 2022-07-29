@@ -21,13 +21,12 @@ export class TicketFormComponent implements OnInit {
 
   currentEntity: Ticket = {
     ticketId: 0,
-    name: "",
-    carreraId: 0,
-    modulo: true,
+    userId: 0,
+    modulo: "",
     motivo: "",
+    descripcion: "",
     telefono: "",
     created: new Date(),
-    updates: new Date(),
     enabled: true,
     tips: []
   };
@@ -49,13 +48,12 @@ export class TicketFormComponent implements OnInit {
         () => {
           this.currentEntity = {
             ticketId: 0,
-            name: "",
-            carreraId: 0,
-            modulo: true,
+            userId: 0,
+            modulo: "",
             motivo: "",
+            descripcion: "",
             telefono: "",
             created: new Date(),
-            updates: new Date(),
             enabled: true,
             tips: []
           };
@@ -78,6 +76,21 @@ export class TicketFormComponent implements OnInit {
       }
     )
   }
+
+  // findByIUser(id: number):void {
+  //   this.ticketService.findByIUser(id).subscribe(
+  //     (response) => {
+  //       this.currentEntity = response;
+  //       this.currentEntity.tips.forEach(
+  //         (tip) => {
+  //           this.tipService.findById(tip.tipId).subscribe(////////////////////////
+  //             (item) => tip.name = item.name
+  //           )
+  //         }
+  //       )
+  //     }
+  //   )
+  // }
 
 
   deleteById(): void {

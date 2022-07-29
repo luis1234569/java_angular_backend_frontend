@@ -3,6 +3,7 @@ import { Ticket } from './ticket';
 import { Observable } from 'rxjs';
 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { User } from '../user/user';
 
 @Injectable({
   providedIn: 'root'
@@ -31,12 +32,20 @@ export class TicketService {
     return this.http.delete<Ticket>(this.url+"/deleteById/"+id, this.httpOptions);
   }
 
-  public findByName(term: string): Observable<Ticket[]>{
-    return this.http.get<Ticket[]>(this.url+"/findByName/"+term, this.httpOptions);
+  public findByMotivo(term: string): Observable<Ticket[]>{
+    return this.http.get<Ticket[]>(this.url+"/findByMotivo/"+term, this.httpOptions);
   }
 
   public findAll(): Observable<Ticket[]>{
     return this.http.get<Ticket[]>(this.url+"/findAll", this.httpOptions);
   }
 
+  // public findByIdUser(id: number): Observable<User>{
+  //   return this.http.get<User>(this.url+"/"+id, this.httpOptions);
+  // }
+
+
+  // public findByUser(term: string): Observable<User[]>{
+  //   return this.http.get<User[]>(this.url+"/findByName/"+term, this.httpOptions);
+  // }
 }

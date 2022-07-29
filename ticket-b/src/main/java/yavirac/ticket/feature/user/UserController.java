@@ -1,4 +1,4 @@
-package yavirac.ticket.feature.career;
+package yavirac.ticket.feature.user;
 
 import java.util.List;
 
@@ -12,21 +12,21 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping("/api/career")
+@RequestMapping("/api/user")
 @CrossOrigin({"*"})
-public class CareerController {
+public class UserController {
 
     @Autowired
-    CareerService careerService;
+    UserService userService;
 
     @GetMapping("/findAll")
-    public List<Career> findAll(){
-        return careerService.findAll();
+    public List<User> findAll(){
+        return userService.findAll();
     }
     
     @GetMapping(value="/findById/{id}")
-    public Career findById(@PathVariable long id) {
-        return careerService.findById(id);
+    public User findById(@PathVariable long id) {
+        return userService.findById(id);
     }
     
 

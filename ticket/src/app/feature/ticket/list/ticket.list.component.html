@@ -1,11 +1,11 @@
 <div class="">
-  <app-ticket-toolbar (termEmitter)="findByName($event)"></app-ticket-toolbar>
+  <app-ticket-toolbar (termEmitter)="findByMotivo($event)"></app-ticket-toolbar>
   <div class="overflow-x-auto bg-white">
     <table class="table table-compact w-full">
       <thead>
         <tr>
           <th></th>
-          <th>Nombre</th>
+          <th>Ticket</th>
           <th>motivo</th>
           <th>Activo</th>
         </tr>
@@ -25,7 +25,7 @@
                 </svg>
             </a>
           </td>
-          <td>{{ticket.name}}</td>
+          <td>Ticket: {{ticket.ticketId}}</td>
           <td>{{ticket.motivo}}</td>
           <td>
             <input class="toggle toggle-primary" type="checkbox" name="" id="" [ngModel]="ticket.enabled">

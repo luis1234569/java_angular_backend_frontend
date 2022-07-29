@@ -34,8 +34,8 @@ public class TicketService {
         return ticketRepository.findAll();
     }
 
-    public List<Ticket> findByName(String term){
-        return ticketRepository.findByNameLikeIgnoreCase(term+"%");
+    public List<Ticket> findByMotivo(String term){
+        return ticketRepository.findByMotivoLikeIgnoreCase("%"+term+"%");
     }
     
 }

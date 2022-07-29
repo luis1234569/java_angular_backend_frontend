@@ -7,7 +7,7 @@ import org.springframework.data.relational.core.mapping.Table;
 import lombok.Data;
 
 @Data 
-@Table("tickettip")
+@Table("ticket_tip")
 public class TicketTip {
     @Id
     @Column("tickettip_id")

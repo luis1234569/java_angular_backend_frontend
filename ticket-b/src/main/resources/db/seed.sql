@@ -13,6 +13,8 @@ CREATE TABLE carreras
 );
 INSERT INTO carreras (name) VALUES ('agricultura');
 
+
+
 CREATE TABLE tickets
 (
     ticket_id serial NOT NULL , primary key(ticket_id),
@@ -30,6 +32,8 @@ CREATE TABLE tickets
     enabled boolean
 );
 INSERT INTO tickets (name,carrera,modulo,motivo,telefono,enabled) VALUES ('Luis',1,true,'motivo','09978',true);
+
+
 
 CREATE TABLE tips
 (

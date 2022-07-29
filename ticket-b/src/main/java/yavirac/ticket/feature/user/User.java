@@ -1,4 +1,4 @@
-package yavirac.ticket.feature.career;
+package yavirac.ticket.feature.user;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
@@ -7,11 +7,11 @@ import org.springframework.data.relational.core.mapping.Table;
 import lombok.Data;
 
 @Data
-@Table("carreras")
-public class Career {
+@Table("users")
+public class User {
 
     @Id
-    @Column("carrera_id")
+    @Column("user_id")
     private long id;
     private String name;
     

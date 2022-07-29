@@ -27,11 +27,11 @@ export class TicketListComponent implements OnInit {
     )
   }
 
-  public findByName(term: string): void{
+  public findByMotivo(term: string): void{
     if (term.length>=2){
-      this.ticketService.findByName(term).subscribe(
+      this.ticketService.findByMotivo(term).subscribe(
         (response) => this.ticketList = response
-        
+
       )
     }
     if (term.length===0){
