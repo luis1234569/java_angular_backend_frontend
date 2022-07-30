@@ -26,6 +26,5 @@ public class Tsticket {
     private Timestamp created;
     private Timestamp updates;
     private boolean enabled;
-    //private byte screenshot;
-    //private byte file
+    
 }

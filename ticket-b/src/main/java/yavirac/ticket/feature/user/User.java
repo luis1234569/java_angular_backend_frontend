@@ -15,7 +15,7 @@ public class User {
 
     @Id
     @Column("person_id")
-    private long personId;
+    private long personId; 
     private String name;
     private String mail ;
     private String login;

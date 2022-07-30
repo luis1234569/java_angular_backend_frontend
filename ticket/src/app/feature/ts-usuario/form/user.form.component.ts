@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { User } from './user';
-import { UserService } from './user.service';
+import { User } from '../user';
+import { UserService } from '../user.service';
 
 @Component({
-  selector: 'app-user',
-  templateUrl: './user.component.html'
+  selector: 'app-user-form',
+  templateUrl: './user.form.component.html'
 })
-export class UserComponent implements OnInit {
+export class UserFormComponent implements OnInit {
 
   constructor(
     private userService: UserService,
@@ -33,7 +33,7 @@ export class UserComponent implements OnInit {
           this.findById(parseInt(params.get("id")!));
         }
       }
-    )
+    ) 
   }
 
   save():void {
@@ -69,7 +69,6 @@ export class UserComponent implements OnInit {
     this.userService.deleteById(this.currentEntity.personId).subscribe(
       () => {
         console.log("registro Borrado");
-        //redireccionar ....
       }
     )
   }

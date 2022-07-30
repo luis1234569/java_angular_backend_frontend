@@ -30,4 +30,11 @@ export class UserService {
     return this.http.delete<User>(this.url+"/deleteById/"+id, this.httpOptions);
   }
 
+  public findAll (): Observable <User[]>{
+    return this.http.get<User[]>(this.url+"/findAll",this.httpOptions);
+  }
+
+  public findByName(term: string): Observable<User[]>{
+    return this.http.get<User[]>(this.url+"/findByName/"+term, this.httpOptions)
+  } 
 }

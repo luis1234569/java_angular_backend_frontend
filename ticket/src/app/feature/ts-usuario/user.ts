@@ -8,5 +8,5 @@ export interface User {
     enabled: boolean,
     created: Date,
     
-    //update:Date,
+    
 }

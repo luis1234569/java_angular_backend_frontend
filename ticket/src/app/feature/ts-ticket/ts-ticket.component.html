@@ -100,22 +100,21 @@
         <input class="input input-primary" type="text" name="" id="" placeholder="Ejemplo: 17568888888"
           [(ngModel)]="currentEntity.dni">
       </div>
+
       <div class="form-control">
         <label for="">Carrera:</label>
-        <input class="input input-primary" type="text" name="" id="" placeholder="Ejemplo: Desarrollo de software"
-          [(ngModel)]="currentEntity.carrera">
+        <select class="select" [(ngModel)]="currentEntity.carrera">
+          <option value="1" >Desarrollo de Software</option>
+          <option value="2" >Marketing</option>
+        </select>
       </div>
 
       <div class="form-control">
-        <label class="label cursor-pointer justify-start">
-          <span class="label-text mr-2">SIAU</span>
-          <input type="checkbox" class="toggle toggle-primary" [(ngModel)]="currentEntity.modulo" />
-          <span class="label-text ml-2">SIGA</span>
-          <!-- <input type="checkbox" name="" id="" [(ngModel)]="currentEntity.modulo">
-          <span class="label-text ml-2">SIAU</span>
-          <input type="checkbox" name="" id="" [(ngModel)]="currentEntity.modulo">
-          <span class="label-text ml-2">SIGA</span> -->
-        </label>
+        <label for="">Modulo:</label>
+        <select class="select" [(ngModel)]="currentEntity.modulo">
+          <option value="true" >SIAU</option>
+          <option value="false" >SIGA</option>
+        </select>
       </div>
       <div class="form-control">
         <label for="">Motivo:</label>
@@ -142,15 +141,15 @@
         <input class="input input-primary" type="text" name="" id="" placeholder="mas informacion en el correo(sugerencia de respaldo)"
           [(ngModel)]="currentEntity.descripcion">
       </div>
-      <!-- <div class="form-control">
+      <div class="form-control">
         <label class="label cursor-pointer justify-start">
           <input type="checkbox" class="toggle toggle-primary" [(ngModel)]="currentEntity.enabled" />
           <span class="label-text ml-2">Activo</span>
         </label>
-      </div> -->
-      <!-- <div class="form-control">
+      </div>
+      <div class="form-control">
         <input class="input input-primary" type="date" name="" id="" [(ngModel)]="currentEntity.created">
-      </div> -->
+      </div>
       <div class="divider"> </div>
       <div class="form-control">
         <div class="card-actions">

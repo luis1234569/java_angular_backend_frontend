@@ -1,5 +1,7 @@
 package yavirac.ticket.feature.user;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -49,4 +51,13 @@ public class UserController {
         userService.deleteById(id);
     }
 
+    @GetMapping("/findAll")
+    public List<User> findAll(){
+        return userService.findAll();
+    }
+
+    @GetMapping("/findByName/{term}")
+    public List<User> findByName(@PathVariable String term){
+        return userService.findByName(term);
+    }
 }
