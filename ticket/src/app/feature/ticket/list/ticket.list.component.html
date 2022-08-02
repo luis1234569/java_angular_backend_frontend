@@ -5,8 +5,8 @@
       <thead>
         <tr>
           <th></th>
-          <th>User</th>
-          <th>motivo</th>
+          <th>Motivo</th>
+          <th>Descripcion</th>
           <th>Activo</th>
 
         </tr>
@@ -26,8 +26,8 @@
                 </svg>
             </a>
           </td>
-          <td>{{ticket.nameUser}}</td>
           <td>{{ticket.motivo}}</td>
+          <td>{{ticket.descripcion}}</td>
           <td>
             <input class="toggle toggle-primary" type="checkbox" name="" id="" [ngModel]="ticket.enabled">
           </td>
