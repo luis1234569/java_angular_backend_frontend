@@ -10,7 +10,7 @@ import org.springframework.data.relational.core.mapping.Table;
 import lombok.Data;
 
 @Data
-@Table("persons")
+@Table("users")
 public class User {
 
     @Id
@@ -24,5 +24,6 @@ public class User {
     private boolean enabled;
     private Timestamp created;
     private Timestamp updated;
+    private Long carreraId;
 
 }

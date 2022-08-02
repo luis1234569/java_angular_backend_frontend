@@ -9,6 +9,7 @@ import { TsCarreraFormComponent } from './ts-carrera/form/ts-carrera.form.compon
 import { TsCarreraListComponent } from './ts-carrera/list/ts-carrera-list.component';
 import { UserListComponent } from './ts-usuario/list/user-list.component';
 import { UserToolbarComponent } from './ts-usuario/toolbar/user-toolbar.component';
+import { CarrerComboboxComponent } from './carrer/carrer-combobox.component';
 
 
 
@@ -20,6 +21,7 @@ import { UserToolbarComponent } from './ts-usuario/toolbar/user-toolbar.componen
     TsCarreraListComponent,
     UserListComponent,
     UserToolbarComponent,
+    CarrerComboboxComponent,
   ],
   imports: [
     FormsModule,
