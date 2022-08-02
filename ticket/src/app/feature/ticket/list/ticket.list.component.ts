@@ -30,7 +30,6 @@ export class TicketListComponent implements OnInit {
   }
 
   public findAll(): void {
-    // console.log(this.ticketService.findAll());
     this.ticketService.findAll().subscribe(
       (response) => {
         this.ticketList = response;

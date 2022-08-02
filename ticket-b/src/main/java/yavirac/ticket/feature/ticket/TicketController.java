@@ -28,7 +28,6 @@ public class TicketController {
     //Create
     @PostMapping("/save")
     public Ticket save(@RequestBody Ticket ticket){
-        // System.out.println(ticketService.save(ticket));
         return ticketService.save(ticket);
     }
 
@@ -52,11 +51,13 @@ public class TicketController {
         ticketService.deleteById(id);
     }
 
+    //Listar
     @GetMapping("/findAll")
     public List<Ticket> findAll(){
         return ticketService.findAll();
     }
 
+    //Find
     @GetMapping("/findByMotivo/{term}")
     public List<Ticket> findByMotivo(@PathVariable String term){
         return ticketService.findByMotivo(term);

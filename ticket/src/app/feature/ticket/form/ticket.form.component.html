@@ -47,9 +47,6 @@
           <span class="label-text ml-2">Activo</span>
         </label>
       </div>
-      <!-- <div class="form-control">
-        <input class="input input-primary" type="date" name="" id="" [(ngModel)]="currentEntity.created">
-      </div> -->
 
       <table class="table table-compact">
         <thead>
@@ -81,7 +78,6 @@
           </tr>
           <tr>
             <td>
-              <!-- <app-tip-search (tipEmitter)="this.currentEntity.tips.push($event)"></app-tip-search> -->
               <app-tip-search (tipEmitter)="addTips($event)" ></app-tip-search>
             </td>
             <td></td>
@@ -94,7 +90,6 @@
       <div class="form-control">
         <div class="card-actions">
           <button class="btn btn-primary btn-sm" (click)="save()">Guardar</button>
-          <!-- <button class="btn btn-sm">Cancelar</button> -->
         </div>
       </div>
     </div>
