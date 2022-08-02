@@ -10,6 +10,7 @@ import { TsCarreraListComponent } from './ts-carrera/list/ts-carrera-list.compon
 import { CarreraToolbarComponent } from './ts-carrera/toolbar/carrera-toolbar.component';
 import { UserListComponent } from './ts-usuario/list/user-list.component';
 import { UserToolbarComponent } from './ts-usuario/toolbar/user-toolbar.component';
+import { TsUsuarioComboboxComponent } from './ts-usuario-combobox/ts-usuario-combobox.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { UserToolbarComponent } from './ts-usuario/toolbar/user-toolbar.componen
     CarreraToolbarComponent,
     UserListComponent,
     UserToolbarComponent,
+    TsUsuarioComboboxComponent,
   ],
   imports: [
     FormsModule,

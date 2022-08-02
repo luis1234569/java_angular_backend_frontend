@@ -15,11 +15,28 @@
             <input type="checkbox" class="toggle toggle-primary" [(ngModel)]="currentEntity.enable" />
           </div>
         </div>
-        <label class="text-teal-500" for="create">Fecha Creacion</label>
-        <input class="input input-primary text-teal-500" type="date" name="" id="create">
-        <label class="text-teal-500" for="updated">Fecha Actualizada</label>
-        <input class="input input-primary text-teal-500" type="date" name="" id="updated">
+        <label class="text-teal-500 text-sm" for="create">Fecha Creacion</label>
+        <input class="input input-primary input-sm rounded text-teal-500" type="date" name="" id="create">
+        <label class="text-teal-500 text-sm" for="updated">Fecha Actualizada</label>
+        <input class="input input-primary input-sm rounded text-teal-500" type="date" name="" id="updated">
+        <label class="text-sm text-teal-500" >Usuario</label>
+        <app-ts-usuario-combobox (usuarioIdEmiter)="currentEntity.personId=$event" [usuarioId]="currentEntity.personId" ></app-ts-usuario-combobox>
       </div>
+
+      <table class="table table-compact">
+        <thead>
+          <tr>
+            <th>Permiso</th>
+            <th>Eliminar<th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td *ngFor="let authority of " ></td>
+          </tr>
+        </tbody>
+      </table>
+
       <div class="card-actions">
         <button class="btn btn-info">
           <span class="text-white" (click)="save()" >Enviar</span>

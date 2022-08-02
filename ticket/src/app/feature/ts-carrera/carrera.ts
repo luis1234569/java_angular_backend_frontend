@@ -4,5 +4,6 @@ export interface Carrera {
   created : Date,
   updated : Date,
   archived : boolean,
-  enable : boolean
+  enable : boolean,
+  personId : number
 }

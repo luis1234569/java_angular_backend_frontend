@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Carrera } from '../carrera';
 import { CarreraService } from '../carrera.service';
 
@@ -11,6 +11,7 @@ export class TsCarreraFormComponent implements OnInit {
   constructor(
     private carreraService : CarreraService,
     private activateRouter : ActivatedRoute,
+    private router         : Router
   ) { }
 
   currentEntity: Carrera ={
@@ -19,7 +20,8 @@ export class TsCarreraFormComponent implements OnInit {
     created : new Date(),
     updated : new Date(),
     archived: true,
-    enable  : true
+    enable  : true,
+    personId : 0
   }
 
   ngOnInit(): void {
@@ -42,8 +44,10 @@ export class TsCarreraFormComponent implements OnInit {
           created : new Date(),
           updated : new Date(),
           archived: true,
-          enable  : true
-        }
+          enable  : true,
+          personId : 0
+        };
+      this.router.navigate(["/layout/carrera-list"])
       }
     )
   }
