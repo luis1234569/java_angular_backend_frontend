@@ -17,4 +17,6 @@ public class Carrera {
     private Timestamp updated;
     private Boolean enable;
     private Boolean archived;
+    @Column("person_id")
+    private Long personId;
 }
