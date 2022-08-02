@@ -28,7 +28,8 @@ export class TicketFormComponent implements OnInit {
     telefono: "",
     created: new Date(),
     enabled: true,
-    tips: []
+    tips: [],
+    nameUser:""
   };
 
   ngOnInit(): void {
@@ -55,7 +56,8 @@ export class TicketFormComponent implements OnInit {
             telefono: "",
             created: new Date(),
             enabled: true,
-            tips: []
+            tips: [],
+            nameUser:""
           };
           this.router.navigate(['/layout/ticket-list']);
         }
@@ -77,26 +79,11 @@ export class TicketFormComponent implements OnInit {
     )
   }
 
-  // findByIUser(id: number):void {
-  //   this.ticketService.findByIUser(id).subscribe(
-  //     (response) => {
-  //       this.currentEntity = response;
-  //       this.currentEntity.tips.forEach(
-  //         (tip) => {
-  //           this.tipService.findById(tip.tipId).subscribe(////////////////////////
-  //             (item) => tip.name = item.name
-  //           )
-  //         }
-  //       )
-  //     }
-  //   )
-  // }
-
 
   deleteById(): void {
     this.ticketService.deleteById(this.currentEntity.ticketId).subscribe(
       () => {
-        console.log("El ticket ha sido borrado");
+        this.router.navigate(['/layout/ticket-list']);
       }
     )
   }
@@ -114,4 +101,6 @@ export class TicketFormComponent implements OnInit {
     tip.tipId=tip.tipId;
     this.currentEntity.tips.push(tip);
   }
+
+
 }

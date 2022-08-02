@@ -1,6 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import { Ticket } from '../ticket';
-import { TicketService } from '../ticket.service';
+import {
+  Component,
+  OnInit
+} from '@angular/core';
+import {
+  UserService
+} from '../../user/user.service';
+import {
+  Ticket
+} from '../ticket';
+import {
+  TicketService
+} from '../ticket.service';
 
 @Component({
   selector: 'app-ticket-list',
@@ -9,35 +19,53 @@ import { TicketService } from '../ticket.service';
 export class TicketListComponent implements OnInit {
 
   constructor(
-    private ticketService: TicketService
-  ) { }
+    private ticketService: TicketService,
+    private userService: UserService
+  ) {}
 
   ticketList: Ticket[] = [];
 
   ngOnInit(): void {
     this.findAll();
-    console.log('funciona');
   }
 
-  public findAll():void {
+  public findAll(): void {
     // console.log(this.ticketService.findAll());
     this.ticketService.findAll().subscribe(
-      (response) => this.ticketList = response
-
+      (response) => {
+        this.ticketList = response;
+        this.fillNames();
+      }
     )
   }
 
-  public findByMotivo(term: string): void{
-    if (term.length>=2){
+  public fillNames(): void {
+    this.ticketList.forEach(
+      (ticket) => {
+        this.userService.findById(
+          ticket.userId
+        ).subscribe(
+          (user) => {
+            ticket.nameUser = user.name
+          }
+        )
+      }
+    )
+  }
+
+  public findByMotivo(term: string): void {
+    if (term.length >= 2) {
       this.ticketService.findByMotivo(term).subscribe(
         (response) => this.ticketList = response
 
       )
     }
-    if (term.length===0){
+    if (term.length === 0) {
       this.findAll();
     }
 
   }
+
+
 
 }

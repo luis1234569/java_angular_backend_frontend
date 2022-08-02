@@ -9,5 +9,6 @@ export interface Ticket {
   telefono: string,
   created: Date,
   enabled: boolean,
-  tips:Tip[]
+  tips:Tip[],
+  nameUser:string
 }

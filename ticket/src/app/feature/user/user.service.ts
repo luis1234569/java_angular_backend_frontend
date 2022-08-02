@@ -24,8 +24,6 @@ export class UserService {
     return this.http.get<User>(this.url+"/findById/"+id, this.httpOptions);
   }
 
-
-
   public findAll(): Observable<User[]>{
     return this.http.get<User[]>(this.url+"/findAll", this.httpOptions);
   }
