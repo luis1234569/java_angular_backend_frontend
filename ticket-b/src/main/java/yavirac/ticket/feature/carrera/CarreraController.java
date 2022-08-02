@@ -1,5 +1,7 @@
 package yavirac.ticket.feature.carrera;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -34,5 +36,13 @@ public class CarreraController {
     @DeleteMapping("/deleteById/{id}")
     public void deleteById(@PathVariable long id){
         carreraService.deleteById(id);
+    }
+    @GetMapping("/findAll")
+    public List<Carrera> findAll(){
+        return carreraService.findAll();
+    }
+    @GetMapping("/findByName/{term}")
+    public List<Carrera> findByName(@PathVariable String term){
+        return carreraService.findByName(term);
     }
 }
