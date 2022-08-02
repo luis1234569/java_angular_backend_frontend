@@ -1,4 +1,4 @@
-package yavirac.ticket.feature.user;
+package yavirac.ticket.feature.users;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
