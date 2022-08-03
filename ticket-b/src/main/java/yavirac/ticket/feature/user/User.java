@@ -24,5 +24,6 @@ public class User {
     private boolean enabled;
     private Timestamp created;
     private Timestamp updated;
+    private Long carreraId;
 
 }
