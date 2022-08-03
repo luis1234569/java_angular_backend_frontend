@@ -29,7 +29,7 @@ export class TicketFormComponent implements OnInit {
     created: new Date(),
     enabled: true,
     tips: [],
-    nameUser:""
+    // nameUser:""
   };
 
   ngOnInit(): void {
@@ -57,7 +57,7 @@ export class TicketFormComponent implements OnInit {
             created: new Date(),
             enabled: true,
             tips: [],
-            nameUser:""
+            // nameUser:""
           };
           this.router.navigate(['/layout/ticket-list']);
         }

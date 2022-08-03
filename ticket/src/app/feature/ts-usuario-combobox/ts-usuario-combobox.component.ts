@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Usuario } from './ts-usuar.io-combobox';
+import { Usuario } from './ts-usuario-combobox';
 import { TsUsuarioComboboxService } from './ts-usuario-combobox.service';
 
 @Component({

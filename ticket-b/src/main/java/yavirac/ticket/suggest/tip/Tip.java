@@ -9,7 +9,7 @@ import lombok.Data;
 @Table("tips")
 public class Tip {
     @Id
-    private long TipId;
+    private long tipId;
     private String name;
 
 }

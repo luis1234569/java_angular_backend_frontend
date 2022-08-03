@@ -1,6 +1,5 @@
 package yavirac.ticket.feature.user;
 
-
 import java.sql.Timestamp;
 
 import org.springframework.data.annotation.Id;
@@ -10,13 +9,14 @@ import org.springframework.data.relational.core.mapping.Table;
 import lombok.Data;
 
 @Data
-@Table("users")
+@Table("userss")
 public class User {
 
     @Id
     @Column("person_id")
-    private long personId; 
+    private long personId;
     private String name;
+    
     private String mail ;
     private String login;
     private String contra ;
@@ -24,6 +24,6 @@ public class User {
     private boolean enabled;
     private Timestamp created;
     private Timestamp updated;
-    private Long carreraId;
-
+    @Column("carrera_id")
+    private int carreraId;
 }

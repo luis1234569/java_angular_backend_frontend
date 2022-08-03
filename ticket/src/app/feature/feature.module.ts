@@ -15,7 +15,7 @@ import { TsUsuarioComboboxComponent } from './ts-usuario-combobox/ts-usuario-com
 import { TicketFormComponent } from './ticket/form/ticket.form.component';
 import { TicketListComponent } from './ticket/list/ticket.list.component';
 import { TicketToolbarComponent } from './ticket/toolbar/ticket.toolbar.component';
-import { UserComboboxComponent } from './user/user-combobox.component';
+// import { UserComboboxComponent } from './user/user-combobox.component';
 import { TipSearchComponent } from './tip/tip-search/tip-search.component';
 
 @NgModule({
@@ -32,7 +32,7 @@ import { TipSearchComponent } from './tip/tip-search/tip-search.component';
     TicketFormComponent,
     TicketListComponent,
     TicketToolbarComponent,
-    UserComboboxComponent,
+    // UserComboboxComponent,
     TipSearchComponent
   ],
   imports: [

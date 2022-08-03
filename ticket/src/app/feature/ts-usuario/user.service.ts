@@ -36,5 +36,5 @@ export class UserService {
 
   public findByName(term: string): Observable<User[]>{
     return this.http.get<User[]>(this.url+"/findByName/"+term, this.httpOptions)
-  } 
+  }
 }

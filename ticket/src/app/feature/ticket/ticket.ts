@@ -10,5 +10,5 @@ export interface Ticket {
   created: Date,
   enabled: boolean,
   tips:Tip[],
-  nameUser:string
+  // nameUser:string
 }

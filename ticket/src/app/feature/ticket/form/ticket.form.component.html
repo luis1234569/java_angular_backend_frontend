@@ -26,9 +26,8 @@
       </div>
 
 
-        <label>Usuarios</label>
-        <app-user-combobox (userIdEmitter)="currentEntity.userId=$event" [userId]="currentEntity.userId">
-        </app-user-combobox>
+        <label>Usuario</label>
+        <app-ts-usuario-combobox (usuarioIdEmiter)="currentEntity.userId=$event" [usuarioId]="currentEntity.userId" ></app-ts-usuario-combobox>
 
 
 
