@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AuthorizeService } from '../../authorize/authorize.service';
 import { User } from '../user';
 import { UserService } from '../user.service';
 
@@ -11,7 +12,9 @@ export class UserFormComponent implements OnInit {
 
   constructor(
     private userService: UserService,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private authorizeService: AuthorizeService,
+    private router         : Router
   ) { }
 
   currentEntity: User = 
@@ -22,8 +25,10 @@ export class UserFormComponent implements OnInit {
     login: "",
     contra: "",
     rol: "",
-    enabled: true,
-    created: new Date()
+    enabled: true, 
+    created: new Date(),
+    carreraId: 0,
+    authorities : []
   };
 
   ngOnInit(): void {
@@ -50,9 +55,12 @@ export class UserFormComponent implements OnInit {
           contra: "",
           rol: "",
           enabled: true,
-          created: new Date()
+          created: new Date(),
+          carreraId: 0,
+          authorities: []
           
         };
+        this.router.navigate(["/layout/usuario-list"]) 
       }
     )
   }
@@ -61,6 +69,13 @@ export class UserFormComponent implements OnInit {
     this.userService.findById(id).subscribe(
       (response) => {
         this.currentEntity = response;
+        this.currentEntity.authorities.forEach(
+          (auth) => {
+            this.authorizeService.findById(auth.id).subscribe(
+              (item) => auth.name = item.name
+            )
+          }
+        )
       }
     )
   }
@@ -73,4 +88,11 @@ export class UserFormComponent implements OnInit {
     )
   }
 
+  removeAuthorize(id: number):void {
+
+    this.currentEntity.authorities =
+    this.currentEntity.authorities.filter(
+      (item) => item.id != id 
+    );
+  }
 }

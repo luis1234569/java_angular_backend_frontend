@@ -1,27 +1,27 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Carrera } from './carrer';
-import { CarreraService } from './carrer.service';
+import { CarrerComboboxService } from './carrer.service';
 
 @Component({
-  selector: 'app-carrer-combobox',
+  selector: 'app-carrera-combobox',
   templateUrl: './carrer-combobox.component.html'
 })
 export class CarrerComboboxComponent implements OnInit {
 
   constructor(
-    private CarreraService: CarreraService
+    private carrerComboboxService: CarrerComboboxService
   ) { }
 
   carreras: Carrera[] = [];
   @Output() carreraIdEmitter = new EventEmitter<number>();
   @Input() carreraId: number = 0;
-
+ 
   ngOnInit(): void {
     this.findAll();
   }
 
   public findAll():void {
-    this.CarreraService.findAll().subscribe(
+    this.carrerComboboxService.findAll().subscribe(
       (respose) => this.carreras = respose
     )
   }

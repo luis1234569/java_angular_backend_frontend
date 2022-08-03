@@ -1,3 +1,5 @@
+import { Authorize } from "../authorize/authorize"
+
 export interface User {
     personId: number,
     name: string,
@@ -7,6 +9,8 @@ export interface User {
     rol:string,
     enabled: boolean,
     created: Date,
+    carreraId:number
+    authorities : Authorize[]
     
     
 }

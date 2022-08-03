@@ -6,7 +6,7 @@ import { Carrera} from './carrer';
 @Injectable({
   providedIn: 'root'
 })
-export class CarreraService {
+export class CarrerComboboxService {
 
   constructor(
     private http: HttpClient
