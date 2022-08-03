@@ -7,7 +7,7 @@ import org.springframework.data.relational.core.mapping.Table;
 import lombok.Data;
 
 @Data
-@Table("persons")
+@Table("users")
 class Authority {
     @Id
     @Column("person_id")
