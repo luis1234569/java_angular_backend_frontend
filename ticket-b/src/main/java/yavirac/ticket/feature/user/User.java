@@ -26,4 +26,6 @@ public class User {
     private Timestamp updated;
     private Long carreraId;
 
+
+    
 }
