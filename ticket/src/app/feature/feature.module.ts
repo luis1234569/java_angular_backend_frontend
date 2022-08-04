@@ -12,6 +12,8 @@ import { UserListComponent } from './ts-usuario/list/user-list.component';
 import { UserToolbarComponent } from './ts-usuario/toolbar/user-toolbar.component';
 import { CarrerComboboxComponent } from './carrer/carrer-combobox.component';
 import { TsUsuarioComboboxComponent } from './ts-usuario-combobox/ts-usuario-combobox.component';
+import { AuthorizeSearchComponent } from './authorize/authorize-search/authorize-search.component';
+
 
 @NgModule({
   declarations: [
@@ -24,6 +26,9 @@ import { TsUsuarioComboboxComponent } from './ts-usuario-combobox/ts-usuario-com
     UserToolbarComponent,
     CarrerComboboxComponent,
     TsUsuarioComboboxComponent,
+    AuthorizeSearchComponent,
+    
+  
   ],
   imports: [
     FormsModule,

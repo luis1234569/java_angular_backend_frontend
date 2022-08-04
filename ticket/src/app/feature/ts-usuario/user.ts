@@ -12,5 +12,4 @@ export interface User {
     carreraId:number
     authorities : Authorize[]
     
-    
 }

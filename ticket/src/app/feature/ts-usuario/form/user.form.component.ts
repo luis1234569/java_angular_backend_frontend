@@ -69,13 +69,14 @@ export class UserFormComponent implements OnInit {
     this.userService.findById(id).subscribe(
       (response) => {
         this.currentEntity = response;
-        this.currentEntity.authorities.forEach(
-          (auth) => {
-            this.authorizeService.findById(auth.id).subscribe(
-              (item) => auth.name = item.name
-            )
-          }
-        )
+      //console.log(this.currentEntity.authorities);
+         this.currentEntity.authorities.forEach(
+           (auth) => {
+             this.authorizeService.findById(auth.id).subscribe(
+               (item) => {auth.name = item.name}
+             )
+           }
+         )
       }
     )
   }
