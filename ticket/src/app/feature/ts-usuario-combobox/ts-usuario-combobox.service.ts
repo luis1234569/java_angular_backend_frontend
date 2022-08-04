@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Usuario } from './ts-usuar.io-combobox';
+import { Usuario } from './ts-usuario-combobox';
 
 @Injectable({
   providedIn: 'root'
@@ -23,6 +23,6 @@ export class TsUsuarioComboboxService {
   }
 
   public findAll(): Observable<Usuario[]>{
-    return this.http.get<Usuario[]>(this.url+"/findAll/", this.HttpOptions);
+    return this.http.get<Usuario[]>(this.url+"/findAll", this.HttpOptions);
   }
 }

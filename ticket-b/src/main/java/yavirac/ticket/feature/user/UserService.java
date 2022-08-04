@@ -7,19 +7,25 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UserService {
-
+    
     @Autowired
     UserRepository userRepository;
 
-    //CRUD = Create, Read, Update, Delete
-
-    public User save(User user){
-
-        return userRepository.save(user);
+    public List<User> findAll(){
+        return userRepository.findAll();
     }
 
     public User findById(long id){
         return userRepository.findById(id).orElse(new User());
+    }
+
+
+
+
+
+    public User save(User user){
+
+        return userRepository.save(user);
     }
 
     public User update(User user){
@@ -30,12 +36,7 @@ public class UserService {
         userRepository.deleteById(id);
     }
      
-    public List<User> findAll(){
-        return userRepository.findAll();
-    }
-
     public List<User> findByName(String term){
         return userRepository.findByNameLikeIgnoreCase(term+"%");
     }
-
 }

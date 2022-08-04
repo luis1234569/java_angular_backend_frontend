@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { FeatureRoutingModule } from './feature-routing.module';
 import { FormsModule } from '@angular/forms';
 import { UserFormComponent } from './ts-usuario/form/user.form.component';
-import { TsticketComponent } from './ts-ticket/ts-ticket.component';
 import { TsCarreraFormComponent } from './ts-carrera/form/ts-carrera.form.component';
 import { TsCarreraListComponent } from './ts-carrera/list/ts-carrera-list.component';
 import { CarreraToolbarComponent } from './ts-carrera/toolbar/carrera-toolbar.component';
@@ -15,22 +14,36 @@ import { TsUsuarioComboboxComponent } from './ts-usuario-combobox/ts-usuario-com
 import { AuthorizeSearchComponent } from './authorize/authorize-search/authorize-search.component';
 import { EstudianteSearchComponent } from './authority/estudiante-search/estudiante-search.component';
 
+import { TicketFormComponent } from './ticket/form/ticket.form.component';
+import { TicketListComponent } from './ticket/list/ticket.list.component';
+import { TicketToolbarComponent } from './ticket/toolbar/ticket.toolbar.component';
+// import { UserComboboxComponent } from './user/user-combobox.component';
+import { TipSearchComponent } from './tip/tip-search/tip-search.component';
+
 @NgModule({
   declarations: [
     TsCarreraFormComponent ,
     UserFormComponent,
-    TsticketComponent,
     TsCarreraListComponent,
     CarreraToolbarComponent,
     UserListComponent,
     UserToolbarComponent,
     CarrerComboboxComponent,
     TsUsuarioComboboxComponent,
+<<<<<<< HEAD
     AuthorizeSearchComponent,
     EstudianteSearchComponent
     
     
   
+=======
+
+    TicketFormComponent,
+    TicketListComponent,
+    TicketToolbarComponent,
+    // UserComboboxComponent,
+    TipSearchComponent
+>>>>>>> 8ac171173bf6a0286c07674bde7bcbfc519fe517
   ],
   imports: [
     FormsModule,
@@ -39,3 +52,29 @@ import { EstudianteSearchComponent } from './authority/estudiante-search/estudia
   ]
 })
 export class FeatureModule { }
+
+// import { TicketFormComponent } from './ticket/form/ticket.form.component';
+// import { FormsModule } from '@angular/forms';
+// import { TicketListComponent } from './ticket/list/ticket.list.component';
+// import { TicketToolbarComponent } from './ticket/toolbar/ticket.toolbar.component';
+// import { UserComboboxComponent } from './user/user-combobox.component';
+// import { TipSearchComponent } from './tip/tip-search/tip-search.component';
+
+
+// @NgModule({
+//   declarations: [
+//     TicketFormComponent,
+//     TicketListComponent,
+//     TicketToolbarComponent,
+//     UserComboboxComponent,
+//     TipSearchComponent
+//   ],
+//   imports: [
+//     CommonModule,
+//     FeatureRoutingModule,
+//     FormsModule
+//   ]
+// })
+// export class FeatureModule { }
+
+
