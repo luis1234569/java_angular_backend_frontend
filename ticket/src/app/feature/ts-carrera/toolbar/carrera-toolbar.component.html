@@ -1,5 +1,5 @@
 <div class="flex flex-row">
-  <button class="btn glass rounded btn-xs" routerLink="../carrera" >
+  <button class="btn glass rounded btn-xs" routerLink="/layout/carrera" >
     <svg
       xmlns="http://www.w3.org/2000/svg"
       id="Layer_1"
@@ -16,10 +16,10 @@
     </span>
   </button>
   <div class="text-xs breadcrumbs ml-2 flex-auto">
-    <ul>
-      <li><a routerLink="/layout/carrera-list">carreras</a></li>
+    <ul class="text-teal-500">
+      <li><a routerLink="/layout/carrera-list">Carreras</a></li>
       <li>{{entityName}}</li>
     </ul>
   </div>
-  <input #inputSearch (input)="onInput(inputSearch.value)" class="input input-primary input-xs rounded-sm" type="search" name="" placeholder="Buscar" id="">
+  <input #inputSearch (input)="onInput(inputSearch.value)" class="input input-primary input-xs rounded-sm text-teal-500" type="search" name="" placeholder="Buscar carrera" id="">
 </div>

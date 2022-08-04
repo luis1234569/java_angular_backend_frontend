@@ -8,7 +8,7 @@
       <div class="divider"></div>
       <div class="grid">
         <label for="name"><span class="text-teal-500">Nombre:</span></label>
-        <input type="text" class="input input-primary text-teal-500 " id="name" placeholder="Materia"  [(ngModel)]="currentEntity.name" />
+        <input type="text" class="input input-primary text-teal-500 " id="name" placeholder="Carrera"  [(ngModel)]="currentEntity.name" />
         <div class="form-control">
           <span class="label cursor-pointer"><span class="text-teal-500">Activo</span></span>
           <div class="label-text">
@@ -22,7 +22,7 @@
         <label class="text-sm text-teal-500" >Usuario</label>
         <app-ts-usuario-combobox (usuarioIdEmiter)="currentEntity.personId=$event" [usuarioId]="currentEntity.personId" ></app-ts-usuario-combobox>
       </div>
-      <table class="table table-compact">
+      <table class="table table-compact text-teal-500">
         <thead>
           <tr>
             <th><span class="text-teal-900" >Estudiantes</span></th>
