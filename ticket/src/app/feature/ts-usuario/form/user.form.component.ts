@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AuthorizeService } from '../../authorize/authorize.service';
+import { AuthorizeService } from '../../authorize/authorize.service'; 
 import { User } from '../user';
 import { UserService } from '../user.service';
 
@@ -69,11 +69,11 @@ export class UserFormComponent implements OnInit {
     this.userService.findById(id).subscribe(
       (response) => {
         this.currentEntity = response;
-      //console.log(this.currentEntity.authorities);
+      
          this.currentEntity.authorities.forEach(
            (auth) => {
              this.authorizeService.findById(auth.id).subscribe(
-               (item) => {auth.name = item.name}
+               (item) => auth.name = item.name
              )
            }
          )

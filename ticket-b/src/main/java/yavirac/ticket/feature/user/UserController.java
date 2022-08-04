@@ -30,10 +30,10 @@ public class UserController {
         return userService.findAll();
     }
     
-    @GetMapping("/findById/{id}")//value=
-    public User findById(@PathVariable long id) {
-        return userService.findById(id);
-    }
+    // @GetMapping("/findById/{id}")//value=
+    // public User findById(@PathVariable long id) {
+    //     return userService.findById(id);
+    // }
 
 
 
@@ -45,10 +45,10 @@ public class UserController {
     }
 
     //Read
-    // @GetMapping("/{id}")
-    // public User findById(@PathVariable long id){
-    //     return userService.findById(id);
-    // }
+     @GetMapping("/{id}")
+    public User findById(@PathVariable long id){
+         return userService.findById(id);
+     }
 
     //Update
     @PutMapping("/update")

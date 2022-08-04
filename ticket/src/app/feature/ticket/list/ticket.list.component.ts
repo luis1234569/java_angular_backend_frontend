@@ -2,9 +2,7 @@ import {
   Component,
   OnInit
 } from '@angular/core';
-// import {
-//   TsUsuarioComboboxService
-// } from '../../ts-usuario-combobox/ts-usuario-combobox.service';
+
 import {
   Ticket
 } from '../ticket';
@@ -20,8 +18,7 @@ export class TicketListComponent implements OnInit {
 
   constructor(
     private ticketService: TicketService,
-    // private userService: TsUsuarioComboboxService
-  ) {}
+     ) {}
 
   ticketList: Ticket[] = [];
 
@@ -33,24 +30,11 @@ export class TicketListComponent implements OnInit {
     this.ticketService.findAll().subscribe(
       (response) => {
         this.ticketList = response;
-        // this.fillNames();
       }
     )
   }
 
-  // public fillNames(): void {
-  //   this.ticketList.forEach(
-  //     (ticket) => {
-  //       this.userService.findById(
-  //         ticket.userId
-  //       ).subscribe(
-  //         (user) => {
-  //           ticket.nameUser = user.name
-  //         }
-  //       )
-  //     }
-  //   )
-  // }
+
 
   public findByMotivo(term: string): void {
     if (term.length >= 2) {
