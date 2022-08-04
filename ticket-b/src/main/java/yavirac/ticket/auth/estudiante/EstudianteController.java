@@ -1,4 +1,4 @@
-package yavirac.ticket.auth.authority;
+package yavirac.ticket.auth.estudiante;
 
 import java.util.List;
 
@@ -10,14 +10,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/authority")
+@RequestMapping("/api/estudiante")
 @CrossOrigin({"*"})
-public class AuthorityController {
+public class EstudianteController {
     @Autowired
-    AuthorityService authorityService;
+    EstudianteService estudianteService;
 
     @GetMapping("/findByName/{term}")
-    public List<Authority>findByName(@PathVariable String term){
-        return authorityService.findByName(term);
+    public List<Estudiante>findByName(@PathVariable String term){
+        return estudianteService.findByName(term);
+    }
+
+    @GetMapping("/findById/{id}")
+    public Estudiante findById (@PathVariable long id){
+        return estudianteService.findById(id);
     }
 }

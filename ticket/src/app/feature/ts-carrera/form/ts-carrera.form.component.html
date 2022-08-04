@@ -8,7 +8,7 @@
       <div class="divider"></div>
       <div class="grid">
         <label for="name"><span class="text-teal-500">Nombre:</span></label>
-        <input type="text" class="input input-primary text-teal-500 " id="name" placeholder="Materia"  [(ngModel)]="currentEntity.name" />
+        <input type="text" class="input input-primary text-teal-500 " id="name" placeholder="Carrera"  [(ngModel)]="currentEntity.name" />
         <div class="form-control">
           <span class="label cursor-pointer"><span class="text-teal-500">Activo</span></span>
           <div class="label-text">
@@ -22,27 +22,32 @@
         <label class="text-sm text-teal-500" >Usuario</label>
         <app-ts-usuario-combobox (usuarioIdEmiter)="currentEntity.personId=$event" [usuarioId]="currentEntity.personId" ></app-ts-usuario-combobox>
       </div>
-
-      <table class="table table-compact">
+      <table class="table table-compact text-teal-500">
         <thead>
           <tr>
-            <th>Permiso</th>
-            <th>Eliminar<th>
+            <th><span class="text-teal-900" >Estudiantes</span></th>
+            <th><span class="text-red-900">Eliminar</span><th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td *ngFor="let authority of " ></td>
+          <tr *ngFor="let estudiante of currentEntity.carreraEstudiante" >
+            <td>
+              {{estudiante.name}}
+            </td>
+            <td>
+              <a (click)="removeEstudiante(estudiante.personId)">
+                <svg class="w-5 h-5 fill-red-800" xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24"><path d="M17,4V2a2,2,0,0,0-2-2H9A2,2,0,0,0,7,2V4H2V6H4V21a3,3,0,0,0,3,3H17a3,3,0,0,0,3-3V6h2V4ZM11,17H9V11h2Zm4,0H13V11h2ZM15,4H9V2h6Z"/></svg>
+              </a>
+            </td>
           </tr>
+          <tr>
+          <app-estudiante-search (estudianteEmiter)="this.currentEntity.carreraEstudiante.push($event)" ></app-estudiante-search>
+          <tr></tr>
         </tbody>
       </table>
-
       <div class="card-actions">
         <button class="btn btn-info">
           <span class="text-white" (click)="save()" >Enviar</span>
-        </button>
-        <button type="reset" class="btn btn-ghost">
-          <span class="text-red-800" (click)="deleteById()">Eliminar</span>
         </button>
       </div>
     </div>

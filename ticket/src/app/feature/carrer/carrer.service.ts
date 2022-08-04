@@ -27,8 +27,8 @@ export class CarrerComboboxService {
 
 
   public findAll(): Observable<Carrera[]>{
-    return this.http.get<Carrera[]>(this.url+"/findAll", this.httpOptions);
+    return this.http.get<Carrera[]>(this.url+"/findAll/", this.httpOptions);
   }
 
- 
+
 }

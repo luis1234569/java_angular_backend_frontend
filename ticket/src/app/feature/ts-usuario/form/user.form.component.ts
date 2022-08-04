@@ -17,7 +17,7 @@ export class UserFormComponent implements OnInit {
     private router         : Router
   ) { }
 
-  currentEntity: User = 
+  currentEntity: User =
   {
     personId: 0,
     name: "",
@@ -38,7 +38,7 @@ export class UserFormComponent implements OnInit {
           this.findById(parseInt(params.get("id")!));
         }
       }
-    ) 
+    )
   }
 
   save():void {
@@ -46,7 +46,7 @@ export class UserFormComponent implements OnInit {
     this.userService.save(this.currentEntity)
     .subscribe(
       () => {
-        this.currentEntity = 
+        this.currentEntity =
         {
           personId: 0,
           name: "",

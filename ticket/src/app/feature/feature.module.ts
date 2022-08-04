@@ -13,7 +13,7 @@ import { UserToolbarComponent } from './ts-usuario/toolbar/user-toolbar.componen
 import { CarrerComboboxComponent } from './carrer/carrer-combobox.component';
 import { TsUsuarioComboboxComponent } from './ts-usuario-combobox/ts-usuario-combobox.component';
 import { AuthorizeSearchComponent } from './authorize/authorize-search/authorize-search.component';
-
+import { EstudianteSearchComponent } from './authority/estudiante-search/estudiante-search.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +27,8 @@ import { AuthorizeSearchComponent } from './authorize/authorize-search/authorize
     CarrerComboboxComponent,
     TsUsuarioComboboxComponent,
     AuthorizeSearchComponent,
+    EstudianteSearchComponent
+    
     
   
   ],

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { EstudianteService } from '../../authority/estudiante.service';
 import { Carrera } from '../carrera';
 import { CarreraService } from '../carrera.service';
 
@@ -9,9 +10,10 @@ import { CarreraService } from '../carrera.service';
 })
 export class TsCarreraFormComponent implements OnInit {
   constructor(
-    private carreraService : CarreraService,
-    private activateRouter : ActivatedRoute,
-    private router         : Router
+    private carreraService    : CarreraService,
+    private activateRouter    : ActivatedRoute,
+    private router            : Router,
+    private estudianteService : EstudianteService,
   ) { }
 
   currentEntity: Carrera ={
@@ -21,7 +23,8 @@ export class TsCarreraFormComponent implements OnInit {
     updated : new Date(),
     archived: true,
     enable  : true,
-    personId : 0
+    personId : 0,
+    carreraEstudiante:[]
   }
 
   ngOnInit(): void {
@@ -45,7 +48,8 @@ export class TsCarreraFormComponent implements OnInit {
           updated : new Date(),
           archived: true,
           enable  : true,
-          personId : 0
+          personId : 0,
+          carreraEstudiante: []
         };
       this.router.navigate(["/layout/carrera-list"])
       }
@@ -55,6 +59,13 @@ export class TsCarreraFormComponent implements OnInit {
     this.carreraService.findById(id).subscribe(
       (response) => {
         this.currentEntity = response;
+        this.currentEntity.carreraEstudiante.forEach(
+          (est) => {
+            this.estudianteService.findById(est.personId).subscribe(
+              (item) => est.name = item.name
+            )
+          }
+        )
       }
     );
   }
@@ -63,6 +74,12 @@ export class TsCarreraFormComponent implements OnInit {
       ()=>{
         console.log('La carrera se elimino satisfactoriamente');
       }
+    )
+  }
+  removeEstudiante(id: number):void {
+    this.currentEntity.carreraEstudiante =
+    this.currentEntity.carreraEstudiante.filter(
+      (item) => item.personId != id
     )
   }
 

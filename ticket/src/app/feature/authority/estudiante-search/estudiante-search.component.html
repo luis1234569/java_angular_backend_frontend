@@ -1,0 +1,10 @@
+<div class="dropdown dropdown-hover text-teal-500">
+  <input #inpSearchEstudiantes (input)="OnInput(inpSearchEstudiantes.value)" type="text" placeholder="Agregar Estudiante" class="input rounded input-primary input-xs w-full"/>
+  <ul class="menu menu-compact dropdown-content bg-slate-200">
+    <li *ngFor="let estudiantes of estudiante">
+      <a (click)="onSelect(estudiantes)">
+        {{estudiantes.name}}
+      </a>
+    </li>
+  </ul>
+</div>
