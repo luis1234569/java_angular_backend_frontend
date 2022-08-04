@@ -7,6 +7,7 @@ export interface User {
     rol:string,
     enabled: boolean,
     created: Date,
-    
-    
+    carreraId: number
+
+
 }

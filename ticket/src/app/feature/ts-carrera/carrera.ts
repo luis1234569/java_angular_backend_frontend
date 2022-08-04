@@ -1,3 +1,5 @@
+import { Estudiante } from "../authority/estudiante";
+
 export interface Carrera {
   carreraId : number,
   name : string,
@@ -5,5 +7,6 @@ export interface Carrera {
   updated : Date,
   archived : boolean,
   enable : boolean,
-  personId : number
+  personId : number,
+  carreraEstudiante : Estudiante[]
 }

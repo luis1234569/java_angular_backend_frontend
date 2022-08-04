@@ -14,7 +14,7 @@ export class UserFormComponent implements OnInit {
     private activatedRoute: ActivatedRoute
   ) { }
 
-  currentEntity: User = 
+  currentEntity: User =
   {
     personId: 0,
     name: "",
@@ -23,7 +23,8 @@ export class UserFormComponent implements OnInit {
     contra: "",
     rol: "",
     enabled: true,
-    created: new Date()
+    created: new Date(),
+    carreraId: 0
   };
 
   ngOnInit(): void {
@@ -33,7 +34,7 @@ export class UserFormComponent implements OnInit {
           this.findById(parseInt(params.get("id")!));
         }
       }
-    ) 
+    )
   }
 
   save():void {
@@ -41,7 +42,7 @@ export class UserFormComponent implements OnInit {
     this.userService.save(this.currentEntity)
     .subscribe(
       () => {
-        this.currentEntity = 
+        this.currentEntity =
         {
           personId: 0,
           name: "",
@@ -50,8 +51,8 @@ export class UserFormComponent implements OnInit {
           contra: "",
           rol: "",
           enabled: true,
-          created: new Date()
-          
+          created: new Date(),
+          carreraId: 0
         };
       }
     )
