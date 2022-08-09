@@ -9,6 +9,8 @@ import { UserListComponent } from '../feature/ts-usuario/list/user-list.componen
 
 import { TicketFormComponent } from '../feature/ticket/form/ticket.form.component';
 import { TicketListComponent } from '../feature/ticket/list/ticket.list.component';
+import { TkrespuestaFormComponent } from '../feature/tkrespuesta/form/tkrespuesta.form.component';
+import { TkrespuestaListComponent } from '../feature/tkrespuesta/list/tkrespuesta-list.component';
 
 
 
@@ -24,11 +26,13 @@ const routes: Routes = [
     {path: 'carrera', component: TsCarreraFormComponent},
     {path: 'carrera-list', component: TsCarreraListComponent},
     {path: '', component:DashboardComponent},
-
-      {path: 'ticket-form', component:TicketFormComponent},
-      {path: 'ticket-form/:id', component:TicketFormComponent},
-      {path: 'ticket-list', component:TicketListComponent},
-      {path: 'dashboard', component:DashboardComponent}
+    {path: 'tkrespuesta-form', component: TkrespuestaFormComponent},
+    {path: 'tkrespuesta-form/:id', component: TkrespuestaFormComponent},
+    {path: 'tkrespuesta-list', component: TkrespuestaListComponent}, 
+    {path: 'ticket-form', component:TicketFormComponent},
+    {path: 'ticket-form/:id', component:TicketFormComponent},
+    {path: 'ticket-list', component:TicketListComponent},
+    {path: 'dashboard', component:DashboardComponent}
   ]
 },
 

@@ -1,0 +1,6 @@
+<select #selectNeed (change)="onSelect(selectNeed.value)" class="select select-primary" name="" id="">
+    <option value=0 selected disabled>Seleccione</option>
+    <option *ngFor="let needs of needs" [value]="needs.necesidadId" [selected]="needs.necesidadId === needId">
+        {{needs.tipo}}
+    </option>
+</select>
